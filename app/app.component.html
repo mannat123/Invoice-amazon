@@ -1,0 +1,29 @@
+
+<div class="container">
+    <br>
+    
+    <div style="font-size:70px;color:rgba(218, 97, 17, 0.973);text-shadow: 5px 6px black"> <b> Invoice </b></div><br><br>
+    <input type="text" placeholder="itemName1" [(ngModel)]="itemName1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="price1" [(ngModel)]="price1"><br><br>
+
+    <input type="text" placeholder="itemName2" [(ngModel)]="itemName2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="price2" [(ngModel)]="price2"><br><br>
+
+    <button (click)="onclick()" class="btn btn-primary">Generate Invoice</button><br><br><br>
+
+    <p style ="color: cornsilk; font-size: 20px;"> {{ iN1 }}  </p>
+    <p style ="color: cornsilk; font-size: 20px;"> {{ iN2 }} </p><br>
+    <p style ="color: cornsilk; font-size: 20px;" *ngIf="checkoutButton">Total : &nbsp; {{total}}</p><br>
+
+   <button *ngIf="checkoutButton" class="btn btn-primary" (click)="totalBill()">CheckOut</button><br><br>
+
+   <div *ngIf="checkout">
+       <p style ="color: cornsilk; font-size: 20px;">{{ iN1 }}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   {{ pr1 }}</p>
+       <p style ="color: cornsilk; font-size: 20px;">{{ iN2 }}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   {{ pr2 }}</p>
+       
+       <p style ="color: cornsilk; font-size: 20px;">Tax(18% gst) : &nbsp; {{ tax }}</p>
+       <p style ="color: cornsilk; font-size: 20px;">Total Price : &nbsp; {{totBill}}</p>
+   </div>
+
+
+</div> 

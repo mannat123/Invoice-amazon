@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+background-image: url('C:\Users\Mannat\Documents\Sem 5\amazon\src\1.jpg');
+height:100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
